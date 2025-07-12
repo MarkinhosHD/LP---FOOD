@@ -1,0 +1,135 @@
+header{
+    width: 100%;
+    padding: 25px 8%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: var(--color-primary-1);
+    box-shadow: 0px 0px 10px 0.05px #777777cb;
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_logo{
+    font-size: 24px;
+    color: var(--color-primary-6);
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+
+.nav-item.active a{
+    color: var(--color-neutral-1);;
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+#mobile_btn{
+    display: none;
+}
+
+#mobile_menu{
+    display: none;
+}
+
+@media screen and (max-width:1023px) {
+
+    #nav_list,
+    #navbar .btn-default{
+        display: none;
+    }
+
+    header #mobile_btn{
+        display: block;
+    }
+
+    header #mobile_btn ion-icon {
+        color: var(--color-primary-6);
+        font-size: 1.5rem;
+        margin-left: 5px;
+        margin-right: 15px;        
+    }
+
+    header #mobile_btn ion-icon:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 10px 0.05px#b66e1d;
+    }
+
+    header #mobile_menu{
+        display: none;
+        width: 22%;
+        height: auto;
+        box-shadow: 0 0 15px 0 rgb(120, 121, 117);
+        position: absolute;
+        top: 5px;
+        left: 40%;
+        border-radius: 10px;
+        background: #fffcee;
+    }
+
+    header #mobile_menu ul{
+        display: block;
+        text-align: center;
+    }
+
+    header #mobile_menu ul li a:hover{
+        color: #686d3c;
+        text-decoration: underline;
+    }
+
+    header #mobile_menu ul li{
+        list-style: none;
+        padding: 7px 0;
+    }
+
+    header #mobile_menu ul li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ca8d3d;
+        font-size: 0.7rem;
+    }
+}
+
+/* =========================================================== MOBILE =============================================================== */
+
+/* ----- PORTRAIT ----- */
+
+@media screen and (max-width:450px) and (min-width:350px){
+
+    header{
+        padding: 20px 17%;
+    }
+
+    #nav_logo{
+        font-size: 20px;
+    }
+
+}
+
+/* ----- LANDSCAPE ----- */
+
+@media screen and (max-width: 915px) and (min-width:451px){
+
+
+    header{
+        padding: 17px 12%;
+    }
+
+    #nav_logo{
+        font-size: 15px;
+    }
+
+}
